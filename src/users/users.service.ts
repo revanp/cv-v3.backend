@@ -9,7 +9,13 @@ export class UsersService {
     return await this.db.user.findMany();
   }
 
-  async findOne() {
-    return await this.db.user.findFirst();
+  async findOne(username: string) {
+    return await this.db.user.findFirst({
+      where: { username },
+      select: {
+        username: true,
+        password: true,
+      },
+    });
   }
 }
