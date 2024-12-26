@@ -22,64 +22,107 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# CV Backend API
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[![NestJS](https://img.shields.io/badge/NestJS-E0234E.svg?style=for-the-badge&logo=NestJS&logoColor=white)](https://nestjs.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white)](https://www.typescriptlang.org/)
 
-## Project setup
+A robust and scalable backend API for CV management system built with NestJS.
+
+## 🚀 Features
+
+- REST API endpoints for CV management
+- TypeScript support
+- PostgreSQL database integration
+- Authentication and authorization
+- API documentation with Swagger
+- Environment configuration
+- Error handling
+- Unit and e2e testing setup
+
+## 🛠 Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+- PostgreSQL
+
+## 📦 Installation
 
 ```bash
-$ pnpm install
+# Clone the repository
+git clone [your-repo-url]
+
+# Install dependencies
+pnpm install
+
+# Set up environment variables
+cp .env.example .env
 ```
 
-## Compile and run the project
+## 🔧 Configuration
 
-```bash
-# development
-$ pnpm run start
+Create a `.env` file in the root directory with the following variables:
 
-# watch mode
-$ pnpm run start:dev
-
-# production mode
-$ pnpm run start:prod
+```env
+PORT=3000
+DATABASE_URL=postgresql://user:password@localhost:5432/cv_db
+JWT_SECRET=your_jwt_secret
 ```
 
-## Run tests
+## 🚀 Running the App
 
 ```bash
-# unit tests
-$ pnpm run test
+# Development
+pnpm run start
+
+# Watch mode
+pnpm run start:dev
+
+# Production mode
+pnpm run start:prod
+```
+
+## 🧪 Testing
+
+```bash
+# Unit tests
+pnpm run test
 
 # e2e tests
-$ pnpm run test:e2e
+pnpm run test:e2e
 
-# test coverage
-$ pnpm run test:cov
+# Test coverage
+pnpm run test:cov
 ```
 
-## Resources
+## 📚 API Documentation
 
-Check out a few resources that may come in handy when working with NestJS:
+Once the application is running, you can access the Swagger API documentation at:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+```
+http://localhost:3000/api/docs
+```
 
-## Support
+## 📁 Project Structure
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```
+src/
+├── auth/           # Authentication related files
+├── common/         # Shared resources
+├── config/         # Configuration files
+├── modules/        # Feature modules
+├── app.module.ts   # Main application module
+└── main.ts         # Application entry point
+```
 
-## Stay in touch
+## 🤝 Contributing
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## License
+## 📝 License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
