@@ -12,10 +12,6 @@ export class UsersService {
   async findOne(username: string) {
     return await this.db.user.findFirst({
       where: { username },
-      select: {
-        username: true,
-        password: true,
-      },
     });
   }
 }
